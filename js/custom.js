@@ -61,3 +61,5 @@ function reveal()
     }
    
 }
+
+document.getElementById('current-rating').innerHTML = "<p>" + 100 + "</p>"

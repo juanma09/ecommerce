@@ -32,6 +32,10 @@
     color: #0a97b0
   }
   
+  .current-rating{
+    float: right;
+    position: absolute;
+  }
 
 .left-reveal{
     transform: translateX(200px);

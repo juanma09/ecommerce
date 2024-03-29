@@ -342,6 +342,17 @@ a:focus {
   color: #04233b;
 }
 
+.slider_section .img-box
+{
+  border-radius: 50%;
+}
+
+.slider_section .img-box img
+{
+  width: 100%;
+  border-radius: 15% 0;
+}
+
 .slider_section .detail-box h1 {
   font-weight: bold;
   text-transform: uppercase;
@@ -424,57 +435,6 @@ a:focus {
   background-color: #0a97b0;
 }
 
-.service_section {
-  position: relative;
-}
-
-.service_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 45px;
-  background-color: #f8f8f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.service_section .box .img-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 125px;
-  min-width: 75px;
-  height: 75px;
-  margin-right: 25px;
-}
-
-.service_section .box .img-box img {
-  max-width: 100%;
-  max-height: 100%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.service_section .box .detail-box h5 {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.service_section .box .detail-box a {
-  color: #04233b;
-  font-weight: 600;
-}
-
-.service_section .box .detail-box a:hover {
-  color: #0a97b0;
-}
-
 .about_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -536,6 +496,49 @@ a:focus {
   background-color: #065968;
 }
 
+.images_section{
+  color: #ffffff;
+}
+
+.images_section .row{
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+.images_section .card-container
+{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 800px) {
+  .images_section .card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.images_section .card-us
+{
+  color:#04233b;
+  width: 200px;
+}
+
+.images_section .card-us img{
+  border-radius: 50%;
+}
+
+.images_section .card-us p{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
 .rating_section {
   position: relative;
   color: #ffffff;
@@ -634,94 +637,6 @@ a:focus {
 
 .rating_section form button:hover {
   background-color: #065968;
-}
-
-.client_section .client_container {
-  width: 75%;
-  margin-top: 45px;
-}
-
-.client_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-right: 5px;
-}
-
-.client_section .box .detail-box {
-  border: 1px solid #dddddd;
-  padding: 25px;
-  margin-bottom: 25px;
-}
-
-.client_section .box .client_id {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.client_section .box .client_id .img-box {
-  position: relative;
-  width: 75px;
-  height: 75px;
-}
-
-.client_section .box .client_id .img-box img {
-  width: 100%;
-}
-
-.client_section .box .client_id .name {
-  margin-left: 15px;
-}
-
-.client_section .box .client_id .name h6 {
-  color: #23242a;
-  font-size: 18px;
-  margin-bottom: 0;
-}
-
-.client_section .box .client_id .name p {
-  margin-bottom: 0;
-}
-
-.client_section .carousel-wrap {
-  margin: 0 auto;
-  position: relative;
-}
-
-.client_section .owl-carousel .owl-nav .owl-prev,
-.client_section .owl-carousel .owl-nav .owl-next {
-  width: 50px;
-  height: 50px;
-  background-size: 18px;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: -15%;
-  outline: none;
-  background-color: #0a97b0;
-}
-
-.client_section .owl-carousel .owl-nav .owl-prev:hover,
-.client_section .owl-carousel .owl-nav .owl-next:hover {
-  background-color: #161825;
-}
-
-.client_section .owl-carousel .owl-nav .owl-prev {
-  top: 25%;
-  background-image: url(../images/prev.png);
-}
-
-.client_section .owl-carousel .owl-nav .owl-next {
-  top: calc(25% + 65px);
-  background-image: url(../images/next.png);
 }
 
 .contact_section {
@@ -967,3 +882,63 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #0a97b0;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #0a97b0;
+  scale: 1.1;
+}
+
+.rating > input:checked ~ label {
+  color: #0a97b0
+}
+
+.current-rating{
+  float: right;
+  position: relative;
+}
+
+
+.left-reveal{
+  transform: translateX(200px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+
+.reveal
+{
+transform: translateY(150px);
+opacity: 0;
+transition: all 2s ease;
+}
+
+
+.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
