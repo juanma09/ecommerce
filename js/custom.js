@@ -145,8 +145,33 @@ $(document).ready(()=>{
 });
 
 setInterval(fetchViews, 5000)
+const setVariables = vars => Object.entries(vars).forEach(v => root.style.setProperty(v[0], v[1]));
+const root = document.querySelector(':root');
+
+function darkmode()
+{
+    setVariables(myVariablesDark);
+}
 
 
+const myVariablesLight = {
+    '--primary': '#0a97b0',
+    '--primary-dark':' #065968',
+    '--background-circle1': '#c6c5c57e',
+    '--background-circle2': '#cecece',
+    '--background-color': '#f7f5f5',
+    '--dark-white': '#000000',
+    '--white-dark': '#ffffff'
+};
+const myVariablesDark = {
+    '--primary': '#065968',
+    '--primary-dark':' #0a97b0',
+    '--background-circle1': '#3535357e',
+    '--background-circle2': '#575757',
+    '--background-color': '#000000',
+    '--dark-white': '#ffffff',
+    '--white-dark': '#000000'
+}
 
 
 
