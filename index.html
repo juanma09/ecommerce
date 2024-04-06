@@ -44,18 +44,27 @@
       <div class="header_top">
         <div class="container-fluid ">
           <div class="contact_nav">
-            <a href="">
+            <div>
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
                 Phone No.
               </span>
-            </a>
-            <a href="">
+            </div>
+            
+            <div>
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
                 indu@chill.com
               </span>
-            </a>
+            </div>
+            
+            <div>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span id="view-count">
+                Views
+              </span>
+            </div>
+            
             <!-- <a href="">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
@@ -87,10 +96,7 @@
                   <a class="nav-link" href="#">Members</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
+                  <a class="nav-link" href="ratings.html"> Reviews</a>
                 </li>
               </ul>
             </div>
@@ -114,15 +120,7 @@
                     <h1>
                       Welcome to <br>
                       our page
-                    </h1>
-                    <p>
-                      placeholder text blablablabla
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Get A Quote
-                      </a>
-                    </div>
+                    </h1>     
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -139,15 +137,12 @@
                 <div class="col-md-7 ">
                   <div class="detail-box">
                     <h1>
-                      Title 2 <br>
-                      Fill later
+                      Get to Know <br>
+                      our members
                     </h1>
-                    <p>
-                      placeholder text blablablabla
-                    </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
-                        Get A Quote
+                      <a href="#about-us" class="btn1">
+                        About us
                       </a>
                     </div>
                   </div>
@@ -166,14 +161,11 @@
                 <div class="col-md-7 ">
                   <div class="detail-box">
                     <h1>
-                      Title 3 <br>
-                      Fill later
+                      See what others <br>
+                      think of the website
                     </h1>
-                    <p>
-                     placeholder text
-                    </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#about-us" class="btn1">
                         Get A Quote
                       </a>
                     </div>
@@ -199,13 +191,13 @@
     <!-- end slider section -->
   </div>
 
-
+  <br>
   <!-- about section -->
 
   <section class="about_section layout_padding-bottom">
-    <div class="container left-reveal">
+    <div id="about-us" class="container left-reveal">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
@@ -220,9 +212,9 @@
             </a>
           </div>
         </div>
-        <div class="col-md-3 ">
+        <div class="col-lg-5 col-md-6 ">
           <div class="img-box">
-            <video width="100%" height="auto" autoplay muted>
+            <video width="100%" height="60%" controls loop autoplay muted>
               <source src="media/videito.mp4" type="video/mp4">
             </video>
             <!-- <img src="images/taipei101.jpg" alt=""> -->
@@ -234,7 +226,7 @@
   </section>
 
   <!-- end about section -->
-
+<!-- 
   <section class="images_section">
     <div class="container reveal">
         <div class="row">
@@ -264,15 +256,67 @@
           </div>
         </div>
     </div>
+  </section> -->
+
+  <br><br>
+  <section class="members_list reveal">
+    <div class="container" style="display:flex; width: 100%; flex-wrap: wrap; justify-content: center;">
+
+      <div class="card">
+        <img src="images/placeholder-avatar.jpg">
+        <span>Mateo Elizeche</span>
+        <p>Carrera: Informatica <br> AGUANTE LA COCA</p>
+        
+        <button>Read More...</button>
+      </div>
+
+      <div class="card">
+        <img src="images/placeholder-avatar.jpg">
+        <span>Giuliana Schulz</span>
+        <p>Carrera: Industrial <br> AGUANTE LA COCA</p>
+        
+        <button onclick="location.href='profile_giuli.html'">Read More...</button>
+      </div>
+
+      <div class="card">
+        <img src="images/placeholder-avatar.jpg">
+        <span>Cecilia Jara</span>
+        <p>Carrera: Informatica <br> AGUANTE LA COCA</p>
+        
+        <button onclick="location.href='profile_ceci.html'">Read More...</button>
+      </div>
+
+      <div class="card">
+        <img src="images/placeholder-avatar.jpg">
+        <span>Yanina Guillen</span>
+        <p>Carrera: Informatica <br> AGUANTE LA COCA</p>
+        
+        <button onclick="location.href='profile_yani.html'">Read More...</button>
+      </div>
+
+      <div class="card">
+        <img src="images/placeholder-avatar.jpg">
+        <span>Yueh-Ling Chen</span>
+        <p>Carrera: Informatica <br> AGUANTE LA COCA</p>
+        
+        <button onclick="location.href='profile_eli.html'">Read More...</button>
+      </div>
+
+      
+
+      
+
+    </div>
   </section>
+  <br><br><br>
 
   <!-- rating section -->
 
   <section class="rating_section layout_padding">
-    <div class="track_bg_box reveal">
+    <div class="track_bg_box">
       <img src="images/taipei101.jpg" alt="">
     </div>
-    <div class="container reveal">
+    <div id="rating_form" class="container reveal">
       <div class="row">
         <div class="col-md-9">
           <div class="heading_container">
@@ -287,7 +331,7 @@
             <label title="text" for="star5"></label>
             <input value="4" name="rate" id="star4" type="radio">
             <label title="text" for="star4"></label>
-            <input value="3" name="rate" id="star3" type="radio" checked="">
+            <input value="3" name="rate" id="star3" type="radio">
             <label title="text" for="star3"></label>
             <input value="2" name="rate" id="star2" type="radio">
             <label title="text" for="star2"></label>
@@ -302,22 +346,24 @@
           
           
          
-          <form action="">
-            <input type="text" placeholder="Enter Your review Number" />
-            <button type="submit">
+          <div class="submit">
+            <input id="review-rating" type="text" placeholder="Enter Your review Number" />
+            <button class="post-rating">
               Submit
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  
+
   <!-- end rating section -->
 
-  <br><br>
+  <!-- <br><br>
 
-  <!-- contact section -->
+  
   <section class="contact_section">
     <div class="container-fluid  reveal">
       <div class="row">
@@ -356,8 +402,8 @@
       </div>
     </div>
   </section>
-  <!-- end contact section -->
-
+  end contact section -->
+  <br>
   <!-- info section -->
 
   <section class="info_section layout_padding2">
@@ -372,13 +418,15 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  No.43, Keelung Rd., Sec.4,
+                  Da'an Dist., <br> Taipei City 106335
+                  Taiwan (R.O.C.)
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Phone No.
+                  (+886) 972 626451
                 </span>
               </a>
               <a href="">
@@ -391,64 +439,41 @@
           </div>
           <div class="info_social">
             <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
             <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <i class="fa fa-github" aria-hidden="true"></i>
             </a>
             <a href="">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 info_col">
+        <div class="col-md-6 col-lg-4 offset-lg-1 info_col">
           <div class="info_detail">
             <h4>
-              Info
+              Developers
             </h4>
-            <p>
-              Some info
-            </p>
+            <ul style="margin-left:-10px">
+              <li>Mateo Elizeche - IFE</li><br>
+              <li>Giuliana Schulz - IDE</li><br>
+              <li>Cecilia Jara</li><br>
+              <li>Yanina Guillen</li><br>
+              <li>Yueh-Ling Chen</li><br>
+            </ul>
+            
           </div>
         </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
+        <div class="col-md-6 col-lg-3 mx-auto info_col">
           <div class="info_link_box">
             <h4>
-              Links
+              Instructors
             </h4>
             <div class="info_links">
-              <a class="active" href="index.html">
-                <img src="images/nav-bullet.png" alt="">
-                Home
-              </a>
-              <a class="" href="about.html">
-                <img src="images/nav-bullet.png" alt="">
-                About
-              </a>
-              <a class="" href="service.html">
-                <img src="images/nav-bullet.png" alt="">
-                Services
-              </a>
-              <a class="" href="contact.html">
-                <img src="images/nav-bullet.png" alt="">
-                Contact Us
-              </a>
+              <p>Prof Kuo</p>
+              <p>TA hola hola</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col ">
-          <h4>
-            Subscribe
-          </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
         </div>
       </div>
     </div>
@@ -478,9 +503,6 @@
   </script>
   <!-- custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
   <!-- End Google Map -->
 
 </body>
